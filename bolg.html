@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font cdn-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+    <style>
+        .roboto {
+  font-family: "Roboto", sans-serif;
+  
+}
+    </style>
+</head>
+
+<body class=" bg-[#dde1ec] roboto">
+    <section class="max-w-screen-2xl mx-auto pt-6 mb-6 px-2 md:px-4">
+        <nav class="bg-white rounded-2xl shadow">
+            <div class="flex items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-x-3">
+                    <img src="assets/logo.png" alt="Navigation ber logo">
+                    <h3 class="text-4xl hidden md:block">Dev<span class="font-bold">Board</span>
+                    </h3>
+                </div>
+                <div>
+                    <a href="./index.html"><button id="click-nav-btn"
+                            class="bg-[#3752FD] rounded-lg py-[10px] px-[20px] text-white font-medium cursor-pointer">Back
+                            to Desk</button></a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </section>
+
+    <h2 class="font-bold text-3xl  text-center my-10">Blogs</h2>
+
+    <section class=" mx-auto space-y-9 max-w-screen-3xl pb-9 px-3 ">
+        <!-- qs no----1 -->
+        <div class=" bg-white rounded-xl p-7 shadow-2xl ">
+            <h1 class="font-bold text-[20px] md:text-3xl border-b-2 border-dashed border-blue-100 mb-5 pb-5">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h1>
+            <p class="text-[16px] md:text-[20px] text-gray-600">
+                <br>
+                <span class="font-semibold">
+                    1. getElementById:
+                </span>
+                <br>
+                <span class="font-semibold">
+                    2. getElementsByClassName()
+                </span>
+                <br>
+                <span class="font-semibold">
+                    3. getElementsByTagName()
+                </span>
+                <span class="font-semibold">
+                    4. querySelector()
+                </span>
+                <br>
+                <span class="font-semibold">
+                    5. querySelectorAll()
+                </span>
+
+                <span class="font-semibold">
+                    6. getElementsByName()
+                </span>
+                <br>
+
+            </p>
+        </div>
+        <!-- qs no----- 2 -->
+        <div class="bg-white rounded-xl p-7 shadow-2xl">
+            <h3 class="font-bold text-[20px] md:text-3xl border-b-2 border-dashed border-blue-100 mb-5 pb-5">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+            <p class="text-[16px] md:text-[20px] text-gray-600">
+                <span class="font-semibold">
+
+                    <span class="text-lg font-bold"> 1. innerHTML:</span>
+                    Returns or sets the HTML content (including HTML tags) of an element.
+                    Can be used to get or change the entire HTML structure inside an element.
+                    <br>
+
+                    <span class="text-lg font-bold"> 2. innerText:</span>
+                    Returns the visible text content of an element (ignores HTML tags).
+                    It is influenced by the styling of the element, e.g., if text is hidden by CSS, it won't be
+                    included.
+                    <span class="text-lg font-bold"> 3. textContent:</span>
+                    <br>
+                    Returns the text content of an element, including all text inside child elements.
+                    Does not consider any styling or hidden text; it gets all the text, regardless of visibility or
+                    formatting.
+
+
+                </span>
+            </p>
+        </div>
+        <!-- qs no-----3 -->
+        <div class="bg-white rounded-xl p-7 shadow-2xl">
+            <h3 class="font-bold text-[20px] md:text-3xl border-b-2 border-dashed border-blue-100 mb-5 pb-5">
+                Question-3 What is event delegation in the DOM?</h3>
+            <p class="text-[16px] md:text-[20px] text-gray-600">
+                Event delegation is a technique in the DOM where instead of adding event listeners to individual
+                elements, you add a single event listener to a parent element. This listener handles events for all
+                child elements, even if they are added dynamically after the event listener is set.
+
+                <h1 class="text-lg font-bold">Key points:</h1>
+                <ul class="font-semibold text-gray-600">
+                    <li>Reduces memory usage by not attaching event listeners to every child element.</li>
+                    <li>Works by leveraging event bubbling, where an event starts at the target element and bubbles up to the
+                        parent.</li>
+                    <li> Efficient for handling events on dynamically created elements.</li>
+                </ul>
+            </p>
+        </div>
+        <!-- qs no----4 -->
+        <div class="bg-white rounded-xl p-7 shadow-2xl">
+            <h3 class="font-bold text-[20px] md:text-3xl border-b-2 border-dashed border-blue-100 mb-5 pb-5">
+                Question-4 What is event bubbling in the DOM?</h3>
+            <p class="text-[16px] md:text-[20px] text-gray-600">
+                <p>Event Bubbling is an event propagation mechanism where an event starts at the target element and then propagates upward to its parent, grandparent, and so on until it reaches the root element.</p>
+
+               <h1 class="font-bold text-lg text-black">Key Points:</h1>
+               <ul class="font-semibold text-sm text-gray-600" >
+                <li>The event first occurs on the target element and then bubbles up through its ancestors.</li>
+                <li>By default, most events in the DOM bubble unless explicitly stopped using event.stopPropagation().</li>
+                <li>Event bubbling is useful for event delegation, making it efficient to handle multiple child elements with a single event listener.</li>
+               </ul>
+            </p>
+        </div>
+        <!-- qs no----- 5 -->
+        <div class="bg-white rounded-lg p-7 shadow-2xl">
+            <h3 class="font-bold text-[20px] md:text-3xl border-b-2 border-dashed border-blue-100 mb-5 pb-5">
+                
+                Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+
+            <p class="text-[16px] md:text-[20px] text-gray-600">
+               <h1 class="font-bold text-lg text-black">Creating, Adding, and Removing Elements in JavaScript</h1>
+               <ol class="font-serif text-sm text-gray-600">
+                <li>Creating an Element</li>
+                    <li>Use document.createElement() to create a new element.</li>
+               </ol>
+               <h1 class="font-bold text-lg text-black">Adding an Element</h1>
+               <ul  class="font-serif text-sm text-gray-600" >
+                <li>Use appendChild() to add the element as a child of a parent element.</li>
+                <li>Use append(), prepend(), before(), and after() for more flexible insertion.</li>
+               </ul>
+               <h1 class="font-bold text-lg text-black">Removing an Element</h1>
+               <ul  class="font-serif text-sm text-gray-600" >
+                <li>Use removeChild() on the parent element to remove a specific child.</li>
+                <li>Use remove() directly on the element to remove itself.</li>
+               </ul>
+            </p>
+        </div>
+    </section>
+
+    
+    <script src="bolg.js"></script>
+</body>
+
+</html>
+cdn.jsdelivr.net

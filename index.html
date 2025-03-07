@@ -1,11 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevBoard</title>
+    <!-- dasyUi cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font cdn-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+    <style>
+        .roboto {
+  font-family: "Roboto", sans-serif;
+  
+}
+    </style>
+
+
 </head>
-<body>
-    
+
+<body id="chenging-Color-all-bg" class="bg-[#F4F7FF] roboto">
+    <header>
+        <nav class="bg-white  rounded-lg px-9 py-4 mx-20">
+            <div class="flex justify-between mx-10">
+                <div class="flex">
+                    <img class="h-9 w-9" src="assets/logo.png" alt="logoimg">
+                    <h1 class="text-2xl text-gray-400 font-semibold">Dev<span class="font-bold text-black">Board</span></h1>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex mr-5 p-1  bg-[#F4F7FF] rounded-lg">
+                        <img class="h-5 w-5 text-gray-400 items-center mr-2" src="assets/checkbox.png" alt="checkboximg">
+                        <h1 id="nav-point">23</h1>
+                    </div>
+                    <div id="theme-Color" class="ml-5 bg-[#F4F7FF] rounded-full">
+                        <img class="p-1 h-10 w-10" src="assets/theme-btn.png" alt="theme-btnimg">
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-5 mb-20 pb-20 ">
+        <section class=" flex rounded-lg px-10 mx-12 justify-between space-x-3 ">
+            <!-- main secion -->
+           
+                <div class="flex justify-between rounded-lg bg-white mr-5">
+                    <!-- main div -->
+                    <div class=" ">
+                        <!-- btn div -->
+                        <div class="flex justify-between mx-auto mt-5 mb-8 gap-6 p-5 ">
+                            <!-- frist btn -->
+                            <div class="bg-[#F4F7FF] w-1/4 rounded-lg flex items-center justify-center ">
+                                <div class=" bg-white h-10 w-10 rounded-lg mr-2">
+                                    <img class="p-1 h-10 w-10" src="assets/checkbox.png" alt="theme-btnimg">
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Task Assigned</p>
+                                    <h1 id="biyog-point" >6</h1>
+                                </div>
+                            </div>
+                            <!-- md btn -->
+                            <a class="items-center bg-gradient-to-br mb-3 from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl w-6/12"
+                            href="./bolg.html">
+                            <div class="flex items-center ">
+                                <div class="pl-10 mt-3 mb-3">
+                                    <img src="./assets/board.png" alt="">
+                                </div>
+
+                                <h2 class="cursor-pointer mb-3 pl-6 text-white text-2xl mt-3">Discover Something <br>New
+                                    Today!</h2>
+
+                            </div>
+                        </a>
+                            <!-- last btn -->
+                            <div class="bg-[#F4F7FF] w-1/4 rounded-lg flex items-center justify-center p-5">
+                                <div class=" bg-white h-10 w-10 rounded-lg mr-2">
+                                    <img class="p-1 h-10 w-10" src="assets/calender.png" alt="theme-btnimg">
+                                </div>
+                                <div id="day-Year-manth-Name">
+
+                                </div>
+                                
+            
+                                
+
+                            </div>
+
+                        </div>
+                        <!-- card div -->
+                        <div class="grid grid-cols-3 space-x-3 space-y-3 items-center justify-center py-4 px-6">
+                        
+                            <!-- ----------c1 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">ShopEase</p>
+                                   <h1 id="c-1-title"  class="text-lg font-bold">Fix Mobile Button Issue </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name="" id="" cols="23" rows="2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[10pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn1Disabled()" id="cardBtton-1"class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ----------c2 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">CloudSync</p>
+                                   <h1 id="c-2-title"class="text-lg font-bold">Add Dark Mode </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name="" id="" cols="23" rows="2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[15pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn2Disabled()" id="cardBtton-2"class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ----------c3 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">SwiftPay</p>
+                                   <h1 id="c-3-title" class="text-lg font-bold">Optimize  Home page  </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name=""  cols="23" rows="2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[15pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn3Disabled()" id="cardBtton-3"class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ----------c4 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">Meta</p>
+                                   <h1 id="c-4-title"class="text-lg font-bold">Add new emoji 🤲 </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name="" id="" cols="23" rows="2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[15pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn4Disabled()" id="cardBtton-4"class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ----------c5 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">Google LLC</p>
+                                   <h1 id="c-5-title"class="text-lg font-bold">Integrate OpenAI API  </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name=""  cols="23" rows="2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[15pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn5Disabled()" id="cardBtton-5"
+                                        class="btton btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ----------c6 -->
+                            <div class="card card-dash bg-base-100  bg-[#F4F7FF]">
+                                <div class="card-body">
+                                    <p class="text-black">Glassdoar</p>
+                                   <h1 id="c-6-title"  class="text-lg font-bold">Improve Job searching  </h1>
+                                   <textarea class="bg-white text-gray-400 rounded-lg p-1" name="" id="" cols="23" rows="2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                    and ensure onClick works properly</textarea>
+                                    <div class="card-actions justify-between mt-3">
+                                        <div>
+                                            <p class="text-gray-400">Deadline</p>
+                                            <h1 class="text-[15pxpx] font-bold">21 March 2025</h1>
+                                        </div>
+                                        <button onclick="btn6Disabled()" id="cardBtton-6"
+                                        class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Completed</button>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+
+                    </div>
+                          </div>
+
+            <!-- saide bar div -->
+            
+                <div class=" ml-6 w-auto py-4 px-14 bg-white rounded-lg">
+                    <div class="flex">
+                        <img class="mr-1" src="assets/activity.png" alt="">
+                        <h1 class="font-semibold ">Activity Log</h1>
+                    </div>
+                    <button id="clearBtn" class="btn btn-primary bg-blue-600 text-white px-5  mt-2 py-2 ">Clear History</button>
+                    <hr class="border-b-0 border-dashed border-[#b4c6f7]">
+                   <!-- --------------- -->
+                    <div id="Activity">
+
+                    </div>
+                </div>
+            </section>
+        
+    </main>
+
+    <script src="index.js"></script>
+     <script src="card.js"></script>
+
 </body>
+
 </html>
