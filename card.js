@@ -198,14 +198,15 @@ document.getElementById('cardBtton-4').addEventListener('click', function () {
 function btn4Disabled() {
     document.getElementById('cardBtton-4').disabled = true;
 }
-// ---------------------C - 5 -----------------------------
+
+// ---------------------------c-5------------------------------
 
 document.getElementById('cardBtton-5').addEventListener('click', function () {
     alert('Board Update Successfully')
 
 
 
-    // biyog- korar jonno
+    // biyog koarar jonno
 
     const taskAssi = document.getElementById('biyog-point').innerText;
     const convartedTask = parseFloat(taskAssi);
@@ -236,21 +237,18 @@ document.getElementById('cardBtton-5').addEventListener('click', function () {
     const div = document.createElement('div');
 
     div.innerHTML = `
-<h1 id="popHistory5" class="h-auto w-auto bg-[#F4F7FF] mt-7 ml-7 mr-4 rounded-lg px-3 py-3" > You have Complete The Task ${cardTitle1} at ${currentTime} </h1>
+<h1 id="popHistory4" class="h-auto w-auto bg-[#F4F7FF] mt-7 ml-7 mr-4 rounded-lg px-3 py-3" > You have Complete The Task ${cardTitle1} at ${currentTime} </h1>
 `
     theHistory.appendChild(div);
 
     document.getElementById('clearBtn').addEventListener('click', function () {
-        document.getElementById('popHistory5').style.display = 'none';
+        document.getElementById('popHistory4').style.display = 'none';
     })
-
 })
 
 function btn5Disabled() {
     document.getElementById('cardBtton-5').disabled = true;
 }
-
- 
 
 
 // ---------------------C- 6 -----------------------------
